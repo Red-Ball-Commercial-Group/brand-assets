@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Red Ball Commercial Group</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#A6192E;--dark:#333F48;--light:#A2AAAD;--field:#EEEEEE}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--dark);font-family:'Lato',sans-serif;font-weight:400;font-size:18px;line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+header{padding:32px 0 8px}
+header img{width:min(360px,70%);height:auto;display:block}
+.tag{color:var(--red);font-weight:700;letter-spacing:.18em;font-size:13px;text-transform:uppercase;margin:48px 0 16px}
+h1{font-weight:900;font-size:clamp(34px,6vw,52px);line-height:1.08;margin:0 0 20px;letter-spacing:-.01em}
+h2{font-weight:900;font-size:clamp(24px,4vw,32px);line-height:1.15;margin:0 0 14px}
+p{margin:0 0 16px}
+.lede{font-size:20px}
+section{border-top:2px solid var(--red);padding:32px 0 20px;margin-top:40px}
+.label{font-weight:700;letter-spacing:.14em;font-size:13px;text-transform:uppercase;margin:0 0 10px;color:var(--dark)}
+.who{display:flex;gap:24px;align-items:flex-start;margin:36px 0 0}
+.who img{width:150px;height:auto;display:block}
+.who .title{font-weight:700;margin:0}
+.steps{padding:0;list-style:none;counter-reset:s;margin:0}
+.steps li{counter-increment:s;margin:0 0 20px;padding-left:44px;position:relative}
+.steps li:before{content:counter(s);position:absolute;left:0;top:0;font-weight:900;color:var(--red);font-size:24px;line-height:1.2}
+.steps b{display:block;font-weight:900}
+form{margin-top:12px}
+fieldset{border:0;padding:0;margin:0 0 20px}
+legend{font-weight:900;font-size:22px;padding:0;margin-bottom:10px}
+.opt{display:block;background:var(--field);padding:14px 16px;margin:0 0 8px;cursor:pointer;font-weight:700}
+.opt input{margin-right:10px;accent-color:var(--red)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.row{grid-template-columns:1fr}.who{flex-direction:column}}
+label.f{display:block;font-weight:700;font-size:15px;margin:0 0 4px}
+input[type=text],input[type=email]{width:100%;background:var(--field);border:0;padding:14px 16px;font:inherit;color:var(--dark);margin:0 0 14px;border-radius:0}
+input:focus{outline:2px solid var(--red)}
+button{background:var(--red);color:#fff;border:0;font:inherit;font-weight:900;letter-spacing:.06em;padding:16px 28px;cursor:pointer;border-radius:0}
+.msg{margin-top:18px;font-weight:700}
+.card a{color:var(--red);font-weight:700}
+footer{border-top:2px solid var(--red);margin-top:56px;padding:20px 0 48px;font-size:14px}
+</style></head><body>
+<div class="wrap">
+<header><img src="img/cobrand.png" alt="Red Ball Commercial Group and eXp Commercial"></header>
+<p class="tag">Aligned. Connected. Market-driven.</p>
+<h1>Bring us the address and what you know.</h1>
+<p class="lede">Red Ball Commercial Group works commercial real estate across Ohio. If you are an eXp advisor with a deal, a client, or a question, you will get a straight answer.</p>
+<section>
+<p class="label">The question</p>
+<h2>"What is it worth?" is always the first question.</h2>
+<p>The answer is not a number, it is a buyer. Who would actually pay for this, and what has to be true before they will?</p>
+
+</section>
+<section>
+<p class="label">Who answers it</p>
+<h2>Red Ball Commercial Group answers that, across Ohio.</h2>
+<p>Office, industrial, land, retail, mixed use. Everything Red Ball knows about this market came from working in it, and the part that decides deals is rarely the data. It is knowing which municipality will move and which one will stall, which economic development organizations actually deliver, which owners will trade quietly and never list, and who really controls the inventory in a given submarket.</p>
+<p>Your client is used to a certain standard of care, and it should not drop because the asset changed. Where we are the right fit, we take it on and work it properly. Where we are not, we find the right person for it.</p>
+</section>
+<section>
+<p class="label">How it works</p>
+<ol class="steps">
+<li><b>Tell us what brings you here.</b>Choose one answer and send your details below.</li>
+<li><b>Bring us the address and what you know.</b>We reply within 48 hours.</li>
+<li><b>Decide how it moves.</b>If you are already working the deal, we co-broke: local knowledge, an owner introduction, a read on a municipality, or a second opinion before you commit to a number. You keep your client and your file. Hold it with clarity. Pass it with intention.</li>
+</ol>
+</section>
+<section id="start">
+<form id="lead" data-source="home">
+<fieldset><legend>What brings you here?</legend>
+<label class="opt"><input type="radio" name="reason" value="Join the commercial group">Join the commercial group</label>
+<label class="opt"><input type="radio" name="reason" value="Refer a deal">Refer a deal</label>
+<label class="opt"><input type="radio" name="reason" value="Collaborate on a deal">Collaborate on a deal</label>
+</fieldset>
+<div class="row"><div><label class="f" for="first">First name</label><input type="text" id="first" name="first" required autocomplete="given-name"></div>
+<div><label class="f" for="last">Last name</label><input type="text" id="last" name="last" required autocomplete="family-name"></div></div>
+<label class="f" for="email">Email</label><input type="email" id="email" name="email" required autocomplete="email">
+<label class="f" for="company">Office or company</label><input type="text" id="company" name="company" autocomplete="organization">
+<button type="submit">SEND</button>
+<p class="msg" id="msg" role="status"></p>
+</form>
+</section>
+<footer>
+<p>eXp Commercial, REC.2020008166.</p>
+</footer>
+</div>
+<script>
+const HS = { portal: "242099894", fallbackEmail: "michelle@redballnetwork.com" };
+// One HubSpot form per answer: each carries its own notification users and follow-up email.
+const FORMS = {
+  "Join the commercial group": "e7b2eb9a-e444-492c-960c-ddbeff7bbb37",
+  "Refer a deal": "8b18a975-3796-4f1e-9ed3-7d5386132914",
+  "Collaborate on a deal": "01c64678-b9e8-4fd8-b74d-f4e718ef12ac"
+};
+const replies = {
+  "Join the commercial group": "Thank you. Check your email, you will hear from us within 48 hours.",
+  "Refer a deal": "Thank you. Check your email, you will hear from us within 48 hours.",
+  "Collaborate on a deal": "Thank you. Check your email, you will hear from us within 48 hours."
+};
+const form = document.getElementById("lead");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const d = new FormData(form), msg = document.getElementById("msg"), btn = form.querySelector("button");
+  const reason = d.get("reason");
+  if (!reason) { msg.textContent = "Choose what brings you here."; return; }
+  btn.disabled = true; msg.textContent = "Sending.";
+  const fields = [
+    { name: "firstname", value: d.get("first") }, { name: "lastname", value: d.get("last") },
+    { name: "email", value: d.get("email") }, { name: "company", value: d.get("company") },
+    { name: "expcon_reason", value: reason }, { name: "expcon_source", value: form.dataset.source }
+  ];
+  try {
+    const r = await fetch("https://api.hsforms.com/submissions/v3/integration/submit/" + HS.portal + "/" + FORMS[reason], {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ fields, context: { pageUri: location.href, pageName: document.title } })
+    });
+    if (!r.ok) throw new Error("submit failed");
+    form.reset(); msg.textContent = replies[reason];
+  } catch (err) {
+    const body = encodeURIComponent("Name: " + d.get("first") + " " + d.get("last") + "\nEmail: " + d.get("email") +
+      "\nCompany: " + d.get("company") + "\nWhat brings me here: " + reason + "\nSource: " + form.dataset.source);
+    msg.innerHTML = 'That did not go through. <a href="mailto:' + HS.fallbackEmail + '?subject=' +
+      encodeURIComponent("Red Ball: " + reason) + '&body=' + body + '">Email us instead</a>.';
+    btn.disabled = false;
+  }
+});
+</script>
+</body></html>
