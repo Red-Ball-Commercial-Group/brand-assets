@@ -34,7 +34,8 @@ legend{font-weight:900;font-size:22px;padding:0;margin-bottom:10px}
 @media(max-width:560px){.row{grid-template-columns:1fr}.who{flex-direction:column}}
 label.f{display:block;font-weight:700;font-size:15px;margin:0 0 4px}
 input[type=text],input[type=email]{width:100%;background:var(--field);border:0;padding:14px 16px;font:inherit;color:var(--dark);margin:0 0 14px;border-radius:0}
-input:focus{outline:2px solid var(--red)}
+select{width:100%;background:var(--field);border:0;padding:14px 16px;font:inherit;color:var(--dark);margin:0 0 14px;border-radius:0}
+input:focus,select:focus{outline:2px solid var(--red)}
 button{background:var(--red);color:#fff;border:0;font:inherit;font-weight:900;letter-spacing:.06em;padding:16px 28px;cursor:pointer;border-radius:0}
 .msg{margin-top:18px;font-weight:700}
 .card a{color:var(--red);font-weight:700}
@@ -44,7 +45,7 @@ footer{border-top:2px solid var(--red);margin-top:56px;padding:20px 0 48px;font-
 <header><img src="../img/cobrand.png" alt="Red Ball Commercial Group and eXp Commercial"></header>
 <p class="tag">Red Ball Commercial Group</p>
 <div class="who"><img src="../img/michelle-portrait.jpg" alt="Michelle Angeny"><div>
-<h1 style="margin-bottom:8px">Michelle Angeny</h1><p class="title">Founder, Red Ball Commercial Group | Advisor, Vice President, eXp Commercial</p></div></div>
+<h1 style="margin-bottom:8px">Michelle Angeny</h1><p class="title">Founder, Red Ball Commercial Group | Advisor, Vice President, eXp Commercial</p><p class="title" style="font-weight:400">Licensed in Ohio.</p></div></div>
 <h2 style="margin-top:28px">Bring Michelle the address and what you know.</h2>
 <p class="lede">You will get a straight answer.</p>
 <section>
@@ -58,8 +59,8 @@ footer{border-top:2px solid var(--red);margin-top:56px;padding:20px 0 48px;font-
 </section>
 <section>
 <p class="label">Who answers it</p>
-<h2>Red Ball Commercial Group answers that, across Ohio.</h2>
-<p>Office, industrial, land, retail, mixed use. Everything Red Ball knows about this market came from working in it, and the part that decides deals is rarely the data. It is knowing which municipality will move and which one will stall, which economic development organizations actually deliver, which owners will trade quietly and never list, and who really controls the inventory in a given submarket.</p>
+<h2>Red Ball Commercial Group answers that.</h2>
+<p>Office, industrial, land, retail, mixed use, in Ohio, Indiana, Illinois and California. Each state is worked by an advisor licensed there. Everything Red Ball knows about its markets came from working in them, and the part that decides deals is rarely the data. It is knowing which municipality will move and which one will stall, which economic development organizations actually deliver, which owners will trade quietly and never list, and who really controls the inventory in a given submarket.</p>
 <p>Your client is used to a certain standard of care, and it should not drop because the asset changed. Where we are the right fit, we take it on and work it properly. Where we are not, we find the right person for it.</p>
 </section>
 <section>
@@ -80,6 +81,7 @@ footer{border-top:2px solid var(--red);margin-top:56px;padding:20px 0 48px;font-
 <div class="row"><div><label class="f" for="first">First name</label><input type="text" id="first" name="first" required autocomplete="given-name"></div>
 <div><label class="f" for="last">Last name</label><input type="text" id="last" name="last" required autocomplete="family-name"></div></div>
 <label class="f" for="email">Email</label><input type="email" id="email" name="email" required autocomplete="email">
+<label class="f" for="state">Which state is the property in?</label><select id="state" name="state" required><option value="">Choose a state</option><option>Ohio</option><option>Indiana</option><option>Illinois</option><option>California</option><option>Other</option></select>
 <label class="f" for="company">Office or company</label><input type="text" id="company" name="company" autocomplete="organization">
 <button type="submit">SEND</button>
 <p class="msg" id="msg" role="status"></p>
@@ -111,7 +113,7 @@ form.addEventListener("submit", async (e) => {
   btn.disabled = true; msg.textContent = "Sending.";
   const fields = [
     { name: "firstname", value: d.get("first") }, { name: "lastname", value: d.get("last") },
-    { name: "email", value: d.get("email") }, { name: "company", value: d.get("company") },
+    { name: "email", value: d.get("email") }, { name: "company", value: d.get("company") }, { name: "state", value: d.get("state") },
     { name: "expcon_reason", value: reason }, { name: "expcon_source", value: form.dataset.source }
   ];
   try {
@@ -123,7 +125,7 @@ form.addEventListener("submit", async (e) => {
     form.reset(); msg.textContent = replies[reason];
   } catch (err) {
     const body = encodeURIComponent("Name: " + d.get("first") + " " + d.get("last") + "\nEmail: " + d.get("email") +
-      "\nCompany: " + d.get("company") + "\nWhat brings me here: " + reason + "\nSource: " + form.dataset.source);
+      "\nCompany: " + d.get("company") + "\nState: " + d.get("state") + "\nWhat brings me here: " + reason + "\nSource: " + form.dataset.source);
     msg.innerHTML = 'That did not go through. <a href="mailto:' + HS.fallbackEmail + '?subject=' +
       encodeURIComponent("Red Ball: " + reason) + '&body=' + body + '">Email us instead</a>.';
     btn.disabled = false;
