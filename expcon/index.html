@@ -76,7 +76,7 @@ footer{border-top:2px solid var(--red);margin-top:56px;padding:20px 0 48px;font-
 <p class="label">How it works</p>
 <ol class="steps">
 <li><b>Tell us what brings you here.</b>Choose one answer and send your details below.</li>
-<li><b>Bring us the address and what you know.</b>We reply within 48 hours.</li>
+<li><b>Bring us the address and what you know.</b>Send the details and we take it from there.</li>
 <li><b>Decide how it moves.</b>If you are already working the deal, we co-broke: local knowledge, an owner introduction, a read on a municipality, or a second opinion before you commit to a number. You keep your client and your file. Hold it with clarity. Pass it with intention.</li>
 </ol>
 </section>
@@ -129,7 +129,7 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify({ fields, context: { pageUri: location.href, pageName: document.title } })
     });
     if (!r.ok) throw new Error("submit failed");
-    form.reset(); msg.textContent = "Thank you. Check your email, you will hear from us within 48 hours.";
+    form.reset(); msg.textContent = "Thank you. Your message is received.";
   } catch (err) {
     const body = encodeURIComponent("Name: " + d.get("first") + " " + d.get("last") + "\nEmail: " + d.get("email") +
       "\nCompany: " + d.get("company") + "\nState: " + d.get("state") + "\nWhat brings me here: " + reason + "\nSource: " + src);

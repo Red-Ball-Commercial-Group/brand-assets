@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Michelle Angeny","jobTitle":"Founder, Red Ball Commercial Group | Advisor, Vice President, eXp Commercial","url":"https://assets.redballnetwork.com/advisors/michelle/","image":"https://assets.redballnetwork.com/advisors/img/michelle.jpg","description":"Michelle Angeny is the founder of Red Ball Commercial Group and an Advisor, Vice President with eXp Commercial, with 18+ years in commercial real estate.","worksFor":[{"@type":"Organization","name":"Red Ball Commercial Group"},{"@type":"Organization","name":"eXp Commercial"}],"areaServed":[{"@type":"State","name":"Ohio"}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who is Michelle Angeny?","acceptedAnswer":{"@type":"Answer","text":"Michelle Angeny is the founder of Red Ball Commercial Group and an Advisor, Vice President with eXp Commercial, with 18+ years in commercial real estate."}},{"@type":"Question","name":"Where is Michelle Angeny licensed?","acceptedAnswer":{"@type":"Answer","text":"Michelle Angeny is licensed in Ohio. Ohio salesperson license SAL.2017001547."}},{"@type":"Question","name":"What is Red Ball Commercial Group?","acceptedAnswer":{"@type":"Answer","text":"Red Ball Commercial Group works commercial real estate in Ohio, Indiana, Illinois and California, each through an advisor licensed there. It covers office, industrial, land, retail and mixed use."}},{"@type":"Question","name":"How do I work with Michelle?","acceptedAnswer":{"@type":"Answer","text":"Choose what brings you here on this page: join the commercial group, refer a deal, or collaborate on a deal. Red Ball replies within 48 hours."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who is Michelle Angeny?","acceptedAnswer":{"@type":"Answer","text":"Michelle Angeny is the founder of Red Ball Commercial Group and an Advisor, Vice President with eXp Commercial, with 18+ years in commercial real estate."}},{"@type":"Question","name":"Where is Michelle Angeny licensed?","acceptedAnswer":{"@type":"Answer","text":"Michelle Angeny is licensed in Ohio. Ohio salesperson license SAL.2017001547."}},{"@type":"Question","name":"What is Red Ball Commercial Group?","acceptedAnswer":{"@type":"Answer","text":"Red Ball Commercial Group works commercial real estate in Ohio, Indiana, Illinois and California, each through an advisor licensed there. It covers office, industrial, land, retail and mixed use."}},{"@type":"Question","name":"How do I work with Michelle?","acceptedAnswer":{"@type":"Answer","text":"Choose what brings you here on this page: join the commercial group, refer a deal, or collaborate on a deal."}}]}</script>
 <style>
 :root{--red:#A6192E;--dark:#333F48;--light:#A2AAAD;--field:#EEEEEE}
 *{box-sizing:border-box}
@@ -86,7 +86,7 @@ footer{border-top:2px solid var(--red);margin-top:56px;padding:20px 0 48px;font-
 <p class="label">How it works</p>
 <ol class="steps">
 <li><b>Tell us what brings you here.</b>Choose one answer and send your details below.</li>
-<li><b>Bring us the address and what you know.</b>We reply within 48 hours.</li>
+<li><b>Bring us the address and what you know.</b>Send the details and we take it from there.</li>
 <li><b>Decide how it moves.</b>If you are already working the deal, we co-broke: local knowledge, an owner introduction, a read on a municipality, or a second opinion before you commit to a number. You keep your client and your file. Hold it with clarity. Pass it with intention.</li>
 </ol>
 </section>
@@ -95,7 +95,7 @@ footer{border-top:2px solid var(--red);margin-top:56px;padding:20px 0 48px;font-
 <h3>Who is Michelle Angeny?</h3><p>Michelle Angeny is the founder of Red Ball Commercial Group and an Advisor, Vice President with eXp Commercial, with 18+ years in commercial real estate.</p>
 <h3>Where is Michelle Angeny licensed?</h3><p>Michelle Angeny is licensed in Ohio. Ohio salesperson license SAL.2017001547.</p>
 <h3>What is Red Ball Commercial Group?</h3><p>Red Ball Commercial Group works commercial real estate in Ohio, Indiana, Illinois and California, each through an advisor licensed there. It covers office, industrial, land, retail and mixed use.</p>
-<h3>How do I work with Michelle?</h3><p>Choose what brings you here on this page: join the commercial group, refer a deal, or collaborate on a deal. Red Ball replies within 48 hours.</p>
+<h3>How do I work with Michelle?</h3><p>Choose what brings you here on this page: join the commercial group, refer a deal, or collaborate on a deal.</p>
 </section>
 <section id="start">
 <form id="lead" data-page="michelle">
@@ -145,7 +145,7 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify({ fields, context: { pageUri: location.href, pageName: document.title } })
     });
     if (!r.ok) throw new Error("submit failed");
-    form.reset(); msg.textContent = "Thank you. Check your email, you will hear from us within 48 hours.";
+    form.reset(); msg.textContent = "Thank you. Your message is received.";
   } catch (err) {
     const body = encodeURIComponent("Name: " + d.get("first") + " " + d.get("last") + "\nEmail: " + d.get("email") +
       "\nCompany: " + d.get("company") + "\nState: " + d.get("state") + "\nWhat brings me here: " + reason + "\nSource: " + src);
